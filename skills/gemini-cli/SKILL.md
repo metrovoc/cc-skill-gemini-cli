@@ -10,6 +10,8 @@ Gemini offers 1M+ token context, strong multi-step reasoning, and fine-grained d
 
 **Caveat**: Gemini's knowledge cutoff means it may struggle with very recent events or factual details. For latest information, prefer web search.
 
+**Note**: Always max timeout limit because it can take quite long time for responses. If it still times out, use exponential backoff when waiting(`sleep`) for bash output.
+
 ## Basic Usage
 
 ```bash
