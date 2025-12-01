@@ -10,7 +10,9 @@ allowed-tools: Bash, Read
 
 **Note**: Always max timeout limit because it can take quite long time for responses. If it still times out, use exponential backoff when waiting(`sleep`) for bash output.
 
-## New Conversation (clears context)
+## New Conversation (clears context and creates new session)
+
+Gemini won't remember any previous context. Use this tool to start a new conversation.
 
 ```bash
 gemini "$(cat << 'EOF'
@@ -19,7 +21,7 @@ EOF
 )"
 ```
 
-# Continue conversation
+## Continue conversation from latest session
 
 ```bash
 gemini -r latest -p "$(cat << 'EOF'
