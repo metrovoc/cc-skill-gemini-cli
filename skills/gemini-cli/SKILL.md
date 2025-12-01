@@ -12,11 +12,11 @@ allowed-tools: Bash, Read
 
 - Always max timeout limit because it can take quite long time for responses. If it still times out, use exponential backoff when waiting(`sleep`) for bash output.
 
-- Gemini might return empty response sometimes, try explicitly ask it to continue.
+- If gemini return empty response, try explicitly ask it to continue in the same session.
 
 ## New Conversation (clears context and creates new session)
 
-Gemini won't remember any previous context! Use this tool only to start a new conversation.
+Gemini won't remember any previous context! Use this tool only when to start a new conversation.
 
 ```bash
 gemini "$(cat << 'EOF'
