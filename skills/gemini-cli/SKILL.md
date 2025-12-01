@@ -27,7 +27,7 @@ EOF
 
 ## List sessions
 
-Use to check session uuid for continue from session.
+Use it to check session uuid for continue from session. Always use this after creating a new session and memorize the uuid.
 
 ```bash
 gemini --list-sessions
@@ -38,7 +38,7 @@ gemini --list-sessions
 Use to continue conversation.
 
 ```bash
-gemini -r {uuid} "$(cat << 'EOF'
+gemini -r {uuid} -p "$(cat << 'EOF'
 follow up
 EOF
 )"
