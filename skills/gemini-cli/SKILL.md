@@ -38,7 +38,7 @@ gemini --list-sessions
 Use to continue conversation.
 
 ```bash
-gemini -r 1 -p "$(cat << 'EOF'
+gemini -r 1 "$(cat << 'EOF'
 follow up
 EOF
 )"
