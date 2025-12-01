@@ -16,7 +16,7 @@ allowed-tools: Bash, Read
 
 ## New Conversation (clears context and creates new session)
 
-Gemini won't remember any previous context! Use this tool only when to start a new conversation.
+Use this tool only when to start a new conversation. Never use it if you want to continue conversation.
 
 ```bash
 gemini "$(cat << 'EOF'
