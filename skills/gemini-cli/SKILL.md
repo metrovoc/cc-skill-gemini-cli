@@ -25,9 +25,18 @@ EOF
 )"
 ```
 
+## Continue conversation (primary tool)
+
+```bash
+gemini -r latest -p "$(cat << 'EOF'
+follow up
+EOF
+)"
+```
+
 ## List sessions
 
-Use it to check session uuid for continue from session. Always use this after creating a new session and memorize the uuid.
+Use it to check session uuid for continue from session.
 
 ```bash
 gemini --list-sessions
