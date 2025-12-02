@@ -10,9 +10,9 @@ allowed-tools: Bash, Read
 
 - Gemini's knowledge cutoff means it may struggle with very recent events or factual details. For latest information, prefer web search.
 
-- Always max timeout limit because it can take quite long time for responses. If it still times out, use exponential backoff when waiting(`sleep`) for bash output.
+- Always set max timeout limit because it can take quite long time for responses. If it still times out, use exponential backoff when waiting(`sleep`) for bash output.
 
-- If gemini return empty response, try explicitly ask it to continue in the same session.
+- If gemini returns empty response, try explicitly ask it to continue in the same session.
 
 ## New Conversation (clears context and creates new session)
 
